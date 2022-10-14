@@ -11,4 +11,15 @@ function buttonSend() {
   });
 }
 
+const sub = document.querySelector('#submit-btn');
+sub.disabled = true;
+const check = document.querySelector('#agreement');
+check.addEventListener('click', () => {
+  if (document.getElementById('submit-btn').disabled === true) {
+    sub.disabled = false;
+  } else {
+    sub.disabled = true;
+  }
+});
+
 buttonSend();
